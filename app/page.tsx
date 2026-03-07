@@ -1,32 +1,27 @@
-import Header from "@/components/header"
 import HeroSection from "@/components/hero-section"
 import AboutSection from "@/components/about-section"
-import CTASection from "@/components/cta-section"
 import GallerySection from "@/components/gallery-section"
 import PartnershipsSection from "@/components/partnerships-section"
-import PartnershipForm from "@/components/partnership-form"
 import RegistrationForm from "@/components/registration-form"
-import Footer from "@/components/footer"
+import Navbar from "@/components/navbar"
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-white overflow-y-auto">
-      <Header />
+    <main className="min-h-screen bg-white">
+      <Navbar />
       
-    
+      {/* القسم اللي عامل مشكلة - عطيته مساحة ضخمة ولون أحمر عشان يبان */}
+      <div className="pt-20 border-8 border-yellow-500">
+         <HeroSection />
+      </div>
+
+      <AboutSection />
+      <GallerySection />
+      <PartnershipsSection />
       
-      <HeroSection />
-      
-      <div className="flex flex-col">
-        <AboutSection />
-        <CTASection />
-        <GallerySection />
-        <PartnershipsSection />
-        <PartnershipForm />
+      <div className="py-20 bg-gray-50">
         <RegistrationForm />
       </div>
-      
-      <Footer />
-    </main>
+    </section>
   )
 }

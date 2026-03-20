@@ -29,7 +29,7 @@ export default function Header() {
               className="object-contain p-1"
             />
           </div>
-          <span className="text-lg font-bold">{"كيان الشباب المستقبل"}</span>
+          <span className="text-lg font-bold">{"كيان الشباب بناة المستقبل"}</span>
         </div>
 
         {/* Desktop Nav */}

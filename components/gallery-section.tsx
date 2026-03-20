@@ -39,16 +39,14 @@ export default function GallerySection() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-cover transition-transform duration-300 lg:group-hover:scale-105"
                 />
                 
-                {/* التعديل هنا: جعلنا التظليل شفافاً (مختفياً) فقط على الشاشات الكبيرة lg، ويظهر بالـ hover */}
-                {/* على الموبايل (الوضع الافتراضي) سيكون ظاهراً opacity-100 */}
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-transparent opacity-100 lg:opacity-0 transition-opacity group-hover:opacity-100" />
+                {/* التظليل: ظاهر دايماً على الموبايل، ومختفي (0) على الكمبيوتر ويظهر بالـ Hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300" />
                 
-                {/* التعديل هنا: جعلنا النص شفافاً (مختفياً) فقط على الشاشات الكبيرة lg، ويظهر بالـ hover */}
-                {/* على الموبايل (الوضع الافتراضي) سيكون ظاهراً opacity-100 */}
-                <p className="absolute bottom-3 right-3 left-3 text-sm font-semibold text-primary-foreground opacity-100 lg:opacity-0 transition-opacity group-hover:opacity-100">
+                {/* النص: ظاهر دايماً على الموبايل، ومختفي (0) على الكمبيوتر ويظهر بالـ Hover */}
+                <p className="absolute bottom-3 right-3 left-3 text-sm font-semibold text-white opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 line-clamp-2 md:line-clamp-none">
                   {image.alt}
                 </p>
               </div>
